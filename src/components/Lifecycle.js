@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-class Life extends Component {
+class Life extends PureComponent {
     //1 get default this.props.
 
     //2 get default state
     state = {
         title : "Life cycle"
     }
-
+/*
     //3 before render
     componentWillMount(){
         console.log("3 before render");
@@ -23,7 +23,7 @@ class Life extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState){
-        if(nextState.title === 'something else')
+        if(nextState.title === this.state.title)
             return false;
 
         return true;
@@ -36,9 +36,10 @@ class Life extends Component {
     componentWillUnmount(){
         console.log("Unmount");
     }
-
+*/
     //4 render jsx
   render() {
+      console.log('RENDER');
     return (
       <div>
           <h3>{this.state.title}</h3>
